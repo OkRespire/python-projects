@@ -24,10 +24,10 @@ class PomWindow:
         self.titleLabel = tk.Label(self.win, text = "Pomodoro Timer", font = "Calibri 40")
         self.titleLabel.pack()
         
-        self.startButton = tk.Button(self.win, text = "Start", command = self.startTimer(), state="normal")
+        self.startButton = tk.Button(self.win, text = "Start", command = self.startTimer, state="normal")
         self.startButton.pack()
 
-        self.stopButton = tk.Button(self.win, text = "Stop", command = self.stopTimer(), state = "disabled")
+        self.stopButton = tk.Button(self.win, text = "Stop", command = self.stopTimer, state = "disabled")
         self.stopButton.pack()
 
         self.isWork,self.isLongRest = True, False
@@ -39,9 +39,9 @@ class PomWindow:
  
     def startTimer(self):
         self.running = True
-        self.startButton = tk.Button(state = "active")
-        self.stopButton = tk.Button(state = "normal")
-    
+        self.startButton.config(state = "active")
+        self.stopButton.config(state = "normal")
+     
     def stopTimer(self):
         self.running = False
   
