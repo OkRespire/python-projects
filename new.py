@@ -18,8 +18,8 @@ while True:
                 completed += 1
                 isWork = False
                 restTime = SHORT_REST_TIME if completed % 4 == 0 else LONG_REST_TIME
-                print("Time to Rest!")
 
+                print("Time to Rest!")
         else:
             restTime -= 1
             if restTime == -1:
